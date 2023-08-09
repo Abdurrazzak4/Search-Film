@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
+  <body>
+    <header>
+      <h1>Find Your Film</h1>
+      <h4 class="pointer">My Watchlist</h4>
+    </header>
+    <div class="searchBox">
+      <label for="inputMovieName">
+        <img src="img/Search.png" alt="Search"
+      /></label>
+      <input type="text" placeholder="Search for a movie" id="inputMovieName" />
+      <button id="searchButton">Search</button>
+    </div>
+    <section>
+      <div class="movies">
+        <img src="img/image 33.png" alt="img" id="movieImg" />
+
+        <div class="aboutMovie">
+          <div id="movieName">
+            Blade Runner <img src="img/star.png" /><span>8.1</span>
+          </div>
+
+          <div class="content">
+            <span>116 min</span><span>Drama, Mystery, Sci-fi</span
+            ><span class="pointer"><img src="img/plus.png" />Watchlist</span>
+          </div>
+          <p>
+            A blade runner must pursue and terminate four replicants who stole a
+            ship in space, and have returned to Earth to find their creator.
+          </p>
+        </div>
+      </div>
+      <!-- <img src="img/Icon.png" alt="Icon">
+        <h3>Start exploring</h3> -->
+    </section>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

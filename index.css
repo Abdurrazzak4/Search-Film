@@ -1,0 +1,128 @@
+html,
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: 560px;
+}
+header{
+    height: 208px;
+    background-image: url("img/image\ 36.png");
+    background-color: #121212;
+    display: flex;
+}
+h1{
+    color: #FFF;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 42.795px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23.775px; /* 55.556% */
+    letter-spacing: -1.926px;
+    margin: auto 42px;
+}
+h4{
+    color: #FFF;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23.775px; /* 111.111% */
+    letter-spacing: -0.971px;
+    margin: auto 40px auto auto;
+}
+.searchBox{
+    display: flex;
+    position: absolute;
+    height: 20px;
+    padding: 0 60px;
+    top : 190px;
+}
+#inputMovieName{
+    display: block;
+    height: 38px;
+    width: 272px;
+    border: none;
+    background-color: #2E2E2F;
+}
+#searchButton{
+    display: flex;
+    width: 120px;
+    padding: 18px 11px 18px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: #2E2E2F;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#searchButton:hover{
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+.searchBox img{
+    background-color: #2E2E2F;
+    padding: 10px;
+}
+
+section{
+    background-color: #121212;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 44px;
+}
+h3{
+    color: #2E2E2F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+}
+
+.movies{
+    display: flex;
+    border-bottom: #2E2E2F solid 1px;
+    padding-bottom: 21px;
+}
+.aboutMovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+    color: #ffffff;
+}
+#movieName{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.content{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    display: flex;
+    gap: 18px;
+}
+p{
+    color: #A5A5A5;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */   
+}
+.pointer{
+    cursor: pointer;
+}
