@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Find Your Film</h1>
-      <h4 class="pointer">My Watchlist</h4>
+      <a href="watchlist.html" class="pointer">My Watchlist</a>
     </header>
     <div class="searchBox">
       <label for="inputMovieName">
@@ -19,10 +19,11 @@
       <input type="text" placeholder="Search for a movie" id="inputMovieName" />
       <button id="searchButton">Search</button>
     </div>
-    <section id="body">
-      
+    <section id="body" class="body">
+      <div id="startPlaceholder">
       <img src="img/Icon.png" alt="Icon">
         <h3>Start exploring</h3>
+      </div>
     </section>
     <script src="index.js"></script>
   </body>

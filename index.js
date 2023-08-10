@@ -1,27 +1,56 @@
 document.getElementById("searchButton").addEventListener("click", () => {
+  document.getElementById("body").innerHTML = "";
   let searchInput = document.getElementById("inputMovieName").value;
   fetch(`https://www.omdbapi.com/?apikey=16ec79b8&s=${searchInput}&page=3`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      document.getElementById("body").innerHTML = `
+      let moviesId = data.Search.map((movie) => movie.imdbID);
+      console.log(moviesId);
+      moviesId.map((id) => {
+        fetch(`https://www.omdbapi.com/?apikey=16ec79b8&i=${id}`)
+          .then((response) => response.json())
+          .then((movies) => {
+            console.log(movies);
+            const newDiv = document.createElement("div");
+            newDiv.className = "movies";
+            if (movies.Poster !== "N/A" && movies.Plot !== "N/A") {
+              newDiv.innerHTML = `
                 <div class="movies">
-                    <img src=${data.Poster} alt="img" id="movieImg" />
+                    <img src=${movies.Poster} alt="img" id="movieImg" />
 
                     <div class="aboutMovie">
                     <div id="movieName">
-                    ${data.Title} <img src="img/star.png" /><span>${data.imdbRating}</span>
+                    ${movies.Title} <img src="img/star.png" /><span>${movies.imdbRating}</span>
                     </div>
 
                     <div class="content">
-                        <span>${data.Runtime}</span><span>${data.Genre}</span
-                        ><span class="pointer"><img src="img/plus.png" />Watchlist</span>
+                        <span>${movies.Runtime}</span><span>${movies.Genre}</span
+                        ><span class="pointer addMovie"><img src="img/plus.png" class="pointer" />Watchlist</span>
                     </div>
                     <p>
-                    ${data.Plot}
+                    ${movies.Plot}
                     </p>
                     </div>
                 </div>
                 `;
+              document.getElementById("body").appendChild(newDiv);
+            }
+          });
+      });
     });
 });
+
+document.addEventListener("click", (e) => {
+  if (e.target.className === "pointer addMovie") {
+    console.log(e.target.parentElement.parentElement.parentElement);
+    localStorage.setItem(
+      "movie",
+      JSON.stringify(
+        e.target.parentElement.parentElement.parentElement.innerHTML
+      )
+    );
+    console.log(localStorage.getItem("movie"))
+  }
+
+});
+

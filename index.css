@@ -21,7 +21,7 @@ h1{
     letter-spacing: -1.926px;
     margin: auto 42px;
 }
-h4{
+a{
     color: #FFF;
     text-align: justify;
     font-family: Inter;
@@ -31,6 +31,7 @@ h4{
     line-height: 23.775px; /* 111.111% */
     letter-spacing: -0.971px;
     margin: auto 40px auto auto;
+    text-decoration: none;
 }
 .searchBox{
     display: flex;
@@ -92,7 +93,6 @@ h3{
 
 .movies{
     display: flex;
-    border-bottom: #2E2E2F solid 1px;
     padding-bottom: 21px;
 }
 #movieImg{
