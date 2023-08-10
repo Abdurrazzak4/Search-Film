@@ -39,12 +39,14 @@ document.getElementById("searchButton").addEventListener("click", () => {
       });
     });
 });
+let i = 0;
 
 document.addEventListener("click", (e) => {
   if (e.target.className === "pointer addMovie") {
+  i++;
     console.log(e.target.parentElement.parentElement.parentElement);
     localStorage.setItem(
-      "movie",
+      `movie${i}`,
       JSON.stringify(
         e.target.parentElement.parentElement.parentElement.innerHTML
       )
