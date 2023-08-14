@@ -3,7 +3,6 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 560px;
-    height: 100%;
 }
 header{
     height: 208px;
@@ -75,11 +74,10 @@ a{
 
 section{
     background-color: #121212;
-    min-height: 100vh;
+    min-height: 570px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 44px;
+    flex-direction: column;
 }
 h3{
     color: #2E2E2F;
@@ -102,7 +100,6 @@ h3{
 .aboutMovie{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0 20px;
     color: #ffffff;
 }
